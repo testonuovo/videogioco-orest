@@ -50,6 +50,10 @@ html, body { height: 100%; margin: 0; overflow: hidden; }
 </style>
 </head>
 <body class="h-full">
+<div id="startScreen">
+<h1>Videogioco di Orest</h1>
+<button onclick="startGame()">Inizia a giocare</button>
+</div>
 <div class="game-container" id="gameContainer">
   <br>
   <div class="text"><h1>Flying Plane Game</div>
@@ -86,6 +90,11 @@ html, body { height: 100%; margin: 0; overflow: hidden; }
 <audio id="bgMusic" src="https://raw.githubusercontent.com/testonuovo/lamore-non-muore-game/main/l'amore%20non%20muore%20(3).mp3" loop></audio>
 
 <script>
+<script>
+function startGame(){
+document.getElementById("startScreen").style.display="none";
+}
+</script> 
 const defaultConfig = { game_title:"Flying Plane", motivation_message:"DON'T GIVE UP 🔥" };
 let gameState = {
   y:0, velocity:0, gravity:0.3, lift:-6, timeAlive:0, gameOver:false, gameStarted:false, level:1, score:0,
@@ -178,3 +187,4 @@ btnDown.addEventListener('touchend',(e)=>{ e.preventDefault(); gameState.touchin
 </script>
 </body>
 </html>
+
